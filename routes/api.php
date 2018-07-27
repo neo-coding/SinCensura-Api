@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/bonos', function(){
     return response()->json(Bono::all());
 });
-
+Route::get('/galeria', 'GaleriaController@index');
 Route::get('/eventos', function(){
     return response()->json(Evento::all());
 })->middleware('cors');
